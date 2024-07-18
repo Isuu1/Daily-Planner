@@ -1,0 +1,13 @@
+@import "../src/components/Sidebar/_sidebar.scss";
+
+.layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background: #ffffff;
+  color: #000;
+}
+
+.inner-layout {
+  display: grid;
+  grid-template-rows: 4rem 1fr 4rem;
+}
