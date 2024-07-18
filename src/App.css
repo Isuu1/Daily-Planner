@@ -4,3 +4,8 @@
   display: grid;
   grid-template-columns: 6rem 1fr;
 }
+
+.inner-layout {
+  display: grid;
+  grid-template-rows: 4rem 1fr 4rem;
+}
