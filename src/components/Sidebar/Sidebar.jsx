@@ -6,8 +6,12 @@ import { FaTasks } from "react-icons/fa";
 import { FaDiagramProject } from "react-icons/fa6";
 import { FaNoteSticky } from "react-icons/fa6";
 import { IoSettings } from "react-icons/io5";
+import { useStateContext } from "../../context/StateContext";
 
 const Sidebar = () => {
+  const { notes } = useStateContext();
+  console.log(notes);
+
   return (
     <div className="sidebar">
       <div>
