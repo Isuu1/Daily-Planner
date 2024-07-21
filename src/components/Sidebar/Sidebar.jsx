@@ -7,6 +7,7 @@ import { FaDiagramProject } from "react-icons/fa6";
 import { FaNoteSticky } from "react-icons/fa6";
 import { IoSettings } from "react-icons/io5";
 import { useStateContext } from "../../context/StateContext";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const { notes } = useStateContext();
@@ -30,10 +31,12 @@ const Sidebar = () => {
           <FaDiagramProject />
           Projects
         </li>
-        <li className="sidebar__menu__item">
-          <FaNoteSticky />
-          Notes
-        </li>
+        <Link to={"/notes"}>
+          <li className="sidebar__menu__item">
+            <FaNoteSticky />
+            Notes
+          </li>
+        </Link>
         <li className="sidebar__menu__item">
           <IoSettings />
           Settings

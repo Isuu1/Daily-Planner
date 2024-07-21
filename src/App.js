@@ -6,6 +6,7 @@ import {
 import Layout from "./components/Layout";
 import Error from "./pages/Error/Error";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Notes from "./pages/Notes/Notes";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Dashboard />,
+      },
+      {
+        path: "notes",
+        element: <Notes />,
       },
     ],
   },
