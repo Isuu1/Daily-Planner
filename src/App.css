@@ -94,6 +94,9 @@
 .newnote-modal__closebutton {
   font-size: 2rem;
   margin-left: auto;
+  position: absolute;
+  right: 0.3rem;
+  top: 0.3rem;
 }
 .newnote-modal__inputs__input {
   background: transparent;
@@ -103,10 +106,18 @@
   border-bottom: 1px solid #919237;
 }
 
+.color-picker {
+  display: flex;
+  gap: 0.4rem;
+  justify-self: start;
+  margin-bottom: 0.5rem;
+}
 .color-picker__color {
+  cursor: pointer;
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  border: 1px solid #ffffff;
 }
 
 button {

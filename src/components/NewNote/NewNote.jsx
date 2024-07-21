@@ -22,12 +22,14 @@ const NewNote = () => {
   }, [noteBackground]);
   return (
     <div className="newnote-modal">
+      <ColorPicker />
       <button
         className="newnote-modal__closebutton"
         onClick={() => setNewNoteModal(false)}
       >
         <IoIosCloseCircle />
       </button>
+
       <div className="newnote-modal__inputs">
         <input
           className="newnote-modal__inputs__input"
@@ -40,7 +42,7 @@ const NewNote = () => {
           placeholder="Content..."
         ></input>
       </div>
-      <ColorPicker />
+
       <button className="notes__addnew-button" onClick={addNewNote}>
         +
       </button>

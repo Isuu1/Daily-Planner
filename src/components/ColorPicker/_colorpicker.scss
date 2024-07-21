@@ -1,8 +1,13 @@
 .color-picker {
+  display: flex;
+  gap: 0.4rem;
+  justify-self: start;
+  margin-bottom: 0.5rem;
   &__color {
+    cursor: pointer;
     border-radius: 50%;
-
     width: 20px;
     height: 20px;
+    border: 1px solid #ffffff;
   }
 }
