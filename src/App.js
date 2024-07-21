@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import Layout from "./components/Layout";
 import Error from "./pages/Error/Error";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
