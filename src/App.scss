@@ -1,4 +1,11 @@
-@import "../src/components/Sidebar/_sidebar.scss";
+@import "../src/components/Sidebar/sidebar";
+@import "../src/components/Note/note";
+@import "../src/pages/Notes/notes";
+
+button {
+  background: none;
+  border: 0;
+}
 
 .layout {
   display: grid;

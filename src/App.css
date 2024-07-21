@@ -40,6 +40,44 @@
   margin-top: 3px;
 }
 
+.note {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-height: 300px;
+  padding: 0.7rem;
+  background: #f5f77e;
+  transform: rotate(5deg);
+  box-shadow: 9px 12px 10px -3px #d4d4d4;
+  transition: all 0.2s;
+}
+.note__pin-button {
+  font-size: 1.3rem;
+}
+.note__remove-button {
+  font-size: 1.3rem;
+}
+.note:hover {
+  transform: rotate(-5deg);
+  transform: scale(1.1);
+}
+
+.notes__addnew-button {
+  background: #0faa0a;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 80px;
+  aspect-ratio: 1/1;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
 .layout {
   display: grid;
   grid-template-columns: auto 1fr;
