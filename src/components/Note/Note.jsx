@@ -4,14 +4,9 @@ import React, { useEffect } from "react";
 import { FaLock } from "react-icons/fa";
 import { IoIosRemoveCircle } from "react-icons/io";
 
-const Note = () => {
-  const note = {
-    title: "Test note",
-    content:
-      "This note is for testing purposes only, just writing something to make a content longer to see how the text behave.",
-    backgroundColor: "#f5f77e",
-    textColor: "#00000",
-  };
+const Note = ({ note }) => {
+  console.log(note);
+
   useEffect(() => {
     const noteContainer = document.querySelector(".note");
     noteContainer.style.backgroundColor = note.backgroundColor;
@@ -27,6 +22,16 @@ const Note = () => {
       </button>
       <h2>{note.title}</h2>
       <p>{note.content}</p>
+      {/* <div>
+        <p>Color: </p>
+        <div
+          style={{
+            background: "#000",
+            width: "10px",
+            height: "10px",
+          }}
+        ></div>
+      </div> */}
     </div>
   );
 };
