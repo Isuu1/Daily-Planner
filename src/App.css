@@ -46,7 +46,6 @@
   max-width: 300px;
   min-height: 300px;
   padding: 0.7rem;
-  background: #f5f77e;
   transform: rotate(3deg);
   box-shadow: 9px 12px 10px -3px #d4d4d4;
   transition: all 0.2s;
@@ -90,6 +89,7 @@
   margin-top: 20%;
   min-height: 300px;
   max-width: 300px;
+  transition: all 0.2s;
 }
 .newnote-modal__closebutton {
   font-size: 2rem;
@@ -101,6 +101,12 @@
   border-left: 0;
   border-right: 0;
   border-bottom: 1px solid #919237;
+}
+
+.color-picker__color {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 
 button {

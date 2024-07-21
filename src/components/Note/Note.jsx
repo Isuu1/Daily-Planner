@@ -3,17 +3,16 @@ import React, { useEffect } from "react";
 //Icons
 import { FaLock } from "react-icons/fa";
 import { IoIosRemoveCircle } from "react-icons/io";
+import { useStateContext } from "../../context/StateContext";
 
 const Note = ({ note }) => {
-  console.log(note);
-
-  useEffect(() => {
-    const noteContainer = document.querySelector(".note");
-    noteContainer.style.backgroundColor = note.backgroundColor;
-  });
+  console.log("Note", note);
 
   return (
-    <div className="note">
+    <div
+      className="note"
+      style={{ backgroundColor: note.backgroundColor }}
+    >
       <button className="note__pin-button">
         <FaLock />
       </button>
@@ -22,16 +21,6 @@ const Note = ({ note }) => {
       </button>
       <h2>{note.title}</h2>
       <p>{note.content}</p>
-      {/* <div>
-        <p>Color: </p>
-        <div
-          style={{
-            background: "#000",
-            width: "10px",
-            height: "10px",
-          }}
-        ></div>
-      </div> */}
     </div>
   );
 };

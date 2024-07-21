@@ -4,19 +4,15 @@ import { v4 as uuidv4 } from "uuid";
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
-  const [notes, setNotes] = useState([
-    {
-      id: 1,
-      title: "Test and first note",
-      content: "some content",
-      backgroundColor: "#f5f77e",
-    },
-  ]);
+  const [notes, setNotes] = useState([]);
   const [newNoteModal, setNewNoteModal] = useState(false);
   const [noteBackground, setNoteBackground] = useState("#f5f77e");
 
   const addNewNote = () => {
-    console.log("Testing add new note function");
+    console.log(
+      "Note background in add new note function: ",
+      noteBackground
+    );
     const newNote = {
       id: uuidv4(),
       title: "New note",
