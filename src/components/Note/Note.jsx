@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 //Icons
 import { FaLock } from "react-icons/fa";
@@ -12,9 +12,10 @@ const Note = () => {
     backgroundColor: "#f5f77e",
     textColor: "#00000",
   };
-
-  const noteContainer = document.querySelector(".note");
-  noteContainer.style.backgroundColor = note.backgroundColor;
+  useEffect(() => {
+    const noteContainer = document.querySelector(".note");
+    noteContainer.style.backgroundColor = note.backgroundColor;
+  });
 
   return (
     <div className="note">
