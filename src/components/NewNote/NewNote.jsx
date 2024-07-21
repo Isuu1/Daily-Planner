@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 //Icons
 import { IoIosCloseCircle } from "react-icons/io";
@@ -11,6 +11,10 @@ const NewNote = () => {
     noteBackground,
     setNoteBackground,
     addNewNote,
+    noteTitle,
+    setNoteTitle,
+    noteContent,
+    setNoteContent,
   } = useStateContext();
 
   //Change note modal color to match color picked by user
@@ -32,18 +36,24 @@ const NewNote = () => {
 
       <div className="newnote-modal__inputs">
         <input
-          className="newnote-modal__inputs__input"
+          className="newnote-modal__inputs__text"
           type="text"
           placeholder="Title..."
+          onChange={(e) => setNoteTitle(e.target.value)}
         ></input>
-        <input
-          className="newnote-modal__inputs__input"
-          type="text"
+        <textarea
+          rows="20"
+          cols="20"
+          className="newnote-modal__inputs__textarea"
           placeholder="Content..."
-        ></input>
+          onChange={(e) => setNoteContent(e.target.value)}
+        ></textarea>
       </div>
 
-      <button className="notes__addnew-button" onClick={addNewNote}>
+      <button
+        className="newnote-modal__add-button"
+        onClick={addNewNote}
+      >
         +
       </button>
     </div>

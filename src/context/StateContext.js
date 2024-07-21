@@ -7,19 +7,31 @@ export const StateContext = ({ children }) => {
   const [notes, setNotes] = useState([]);
   const [newNoteModal, setNewNoteModal] = useState(false);
   const [noteBackground, setNoteBackground] = useState("#f5f77e");
+  const [noteTitle, setNoteTitle] = useState();
+  const [noteContent, setNoteContent] = useState();
 
   const addNewNote = () => {
     console.log(
       "Note background in add new note function: ",
       noteBackground
     );
+
+    if (!noteTitle || !noteContent) {
+      alert("Please provide title and content");
+      return;
+    }
+    //Generate random number to define note rotation
+    let randomNumber = Math.floor(Math.random() * 9) - 4;
+    console.log("Random number: ", randomNumber);
     const newNote = {
       id: uuidv4(),
-      title: "New note",
-      content: "some content",
+      title: noteTitle,
+      content: noteContent,
       backgroundColor: noteBackground,
+      rotation: randomNumber,
     };
     setNotes((prevItems) => [...prevItems, newNote]);
+    setNewNoteModal(false);
   };
 
   return (
@@ -32,6 +44,10 @@ export const StateContext = ({ children }) => {
         addNewNote,
         noteBackground,
         setNoteBackground,
+        noteTitle,
+        setNoteTitle,
+        noteContent,
+        setNoteContent,
       }}
     >
       {children}

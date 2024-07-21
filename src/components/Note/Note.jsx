@@ -11,7 +11,10 @@ const Note = ({ note }) => {
   return (
     <div
       className="note"
-      style={{ backgroundColor: note.backgroundColor }}
+      style={{
+        backgroundColor: note.backgroundColor,
+        transform: `rotate(${note.rotation}deg)`,
+      }}
     >
       <button className="note__pin-button">
         <FaLock />

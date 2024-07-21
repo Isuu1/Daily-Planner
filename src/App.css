@@ -97,13 +97,81 @@
   position: absolute;
   right: 0.3rem;
   top: 0.3rem;
+  transition: all 0.2s;
 }
-.newnote-modal__inputs__input {
+.newnote-modal__closebutton:hover {
+  color: #ffffff;
+}
+.newnote-modal__inputs {
+  margin-top: 1rem;
+}
+.newnote-modal__inputs__text {
+  box-sizing: border-box;
+  padding: 0.2rem;
+  font-size: 1.2rem;
   background: transparent;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid #919237;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.newnote-modal__inputs__text::-moz-placeholder {
+  color: #000000;
+}
+.newnote-modal__inputs__text::placeholder {
+  color: #000000;
+}
+.newnote-modal__inputs__text:focus {
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.1764705882);
+}
+.newnote-modal__inputs__textarea {
+  box-sizing: border-box;
+  padding: 0.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  resize: none;
+  max-height: 25px;
+  transition: all 0.2s ease-in-out;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.newnote-modal__inputs__textarea::-webkit-scrollbar {
+  display: none;
+}
+.newnote-modal__inputs__textarea::-moz-placeholder {
+  color: #000000;
+}
+.newnote-modal__inputs__textarea::placeholder {
+  color: #000000;
+}
+.newnote-modal__inputs__textarea:focus {
+  outline: none;
+  border: none;
+  max-height: 200px;
+  background: rgba(255, 255, 255, 0.1764705882);
+}
+.newnote-modal__add-button {
+  margin-left: auto;
+  background: #000000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  width: 60px;
+  aspect-ratio: 1/1;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+.newnote-modal__add-button:hover {
+  border: 2px solid #000000;
+  background: #fff;
+  color: #000000;
 }
 
 .color-picker {
