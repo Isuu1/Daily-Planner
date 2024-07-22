@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import Note from "../../components/Note/Note";
 import { useStateContext } from "../../context/StateContext";
-
-//Icons
 import NewNote from "../../components/NewNote/NewNote";
+//Icons
+
+import { IoIosAddCircle } from "react-icons/io";
 
 const Notes = () => {
   const {
@@ -17,19 +18,21 @@ const Notes = () => {
   console.log("Current notes: ", notes);
 
   return (
-    <div className="notes">
-      {newNoteModal && <NewNote />}
-      {newNoteModal && <div className="blur"></div>}
-      {notes.map((note) => {
-        return <Note note={note} key={note.id} />;
-      })}
-      <button
-        className="notes__addnew-button"
-        onClick={() => setNewNoteModal(true)}
-      >
-        +
-      </button>
-    </div>
+    <>
+      <div className="notes">
+        <button
+          className="notes__addnew-button"
+          onClick={() => setNewNoteModal(true)}
+        >
+          <IoIosAddCircle />
+        </button>
+        {newNoteModal && <NewNote />}
+        {newNoteModal && <div className="blur"></div>}
+        {notes.map((note) => {
+          return <Note note={note} key={note.id} />;
+        })}
+      </div>
+    </>
   );
 };
 

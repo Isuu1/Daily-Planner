@@ -42,7 +42,7 @@ const NewNote = () => {
           onChange={(e) => setNoteTitle(e.target.value)}
         ></input>
         <textarea
-          rows="20"
+          rows="8"
           cols="20"
           className="newnote-modal__inputs__textarea"
           placeholder="Content..."

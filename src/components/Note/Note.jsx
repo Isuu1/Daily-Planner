@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
 
 //Icons
-import { FaLock } from "react-icons/fa";
+import { FaUnlock } from "react-icons/fa6";
+import { FaLock } from "react-icons/fa6";
 import { IoIosRemoveCircle } from "react-icons/io";
+
+//Context
 import { useStateContext } from "../../context/StateContext";
 
 const Note = ({ note }) => {
@@ -13,17 +16,21 @@ const Note = ({ note }) => {
       className="note"
       style={{
         backgroundColor: note.backgroundColor,
-        transform: `rotate(${note.rotation}deg)`,
+        //Dynamically rotate a note when creating it
+        // transform: `rotate(${note.rotation}deg)`,
       }}
     >
-      <button className="note__pin-button">
-        <FaLock />
-      </button>
-      <button className="note__remove-button">
-        <IoIosRemoveCircle />
-      </button>
-      <h2>{note.title}</h2>
-      <p>{note.content}</p>
+      <div className="note__buttons">
+        <button className="note__buttons__pin-button">
+          <FaUnlock />
+        </button>
+        <button className="note__buttons__remove-button">
+          <IoIosRemoveCircle />
+        </button>
+      </div>
+
+      <h3>{note.title}</h3>
+      <p className="note__textarea">{note.content}</p>
     </div>
   );
 };

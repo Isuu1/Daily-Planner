@@ -10,6 +10,10 @@ button {
   cursor: pointer;
 }
 
+p {
+  font-size: 1rem;
+}
+
 .blur {
   z-index: 98;
   width: 100%;
@@ -24,9 +28,12 @@ button {
   grid-template-columns: auto 1fr;
   background: #ffffff;
   color: #000;
+  height: 100vh;
 }
 
 .inner-layout {
   display: grid;
   grid-template-rows: 4rem 1fr 4rem;
+  height: 100%;
+  overflow: hidden;
 }

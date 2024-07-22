@@ -58,7 +58,7 @@
       width: 100%;
       font-size: 1rem;
       resize: none;
-      max-height: 25px;
+      // max-height: 25px;
       transition: all 0.2s ease-in-out;
       //Hide scrollbar
       -ms-overflow-style: none; /* IE and Edge */
@@ -72,7 +72,7 @@
       &:focus {
         outline: none;
         border: none;
-        max-height: 200px;
+        // max-height: 200px;
         background: #ffffff2d;
         // background: rgb(226, 178, 75);
       }

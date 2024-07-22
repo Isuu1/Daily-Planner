@@ -31,7 +31,11 @@ export const StateContext = ({ children }) => {
       rotation: randomNumber,
     };
     setNotes((prevItems) => [...prevItems, newNote]);
+    //Close new note modal
     setNewNoteModal(false);
+    //Reset content and title values
+    setNoteTitle([]);
+    setNoteContent([]);
   };
 
   return (
