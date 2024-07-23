@@ -28,8 +28,8 @@ const Notes = () => {
         </button>
         {newNoteModal && <NewNote />}
         {newNoteModal && <div className="blur"></div>}
-        {notes.map((note) => {
-          return <Note note={note} key={note.id} />;
+        {notes.map((note, index) => {
+          return <Note note={note} index={index} key={note.id} />;
         })}
       </div>
     </>

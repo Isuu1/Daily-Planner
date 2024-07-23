@@ -9,6 +9,7 @@ export const StateContext = ({ children }) => {
   const [noteBackground, setNoteBackground] = useState("#f5f77e");
   const [noteTitle, setNoteTitle] = useState();
   const [noteContent, setNoteContent] = useState();
+  const [lockNote, setLockNote] = useState(false);
 
   const addNewNote = () => {
     console.log(
@@ -29,6 +30,7 @@ export const StateContext = ({ children }) => {
       content: noteContent,
       backgroundColor: noteBackground,
       rotation: randomNumber,
+      locked: false,
     };
     setNotes((prevItems) => [...prevItems, newNote]);
     //Close new note modal
@@ -36,6 +38,10 @@ export const StateContext = ({ children }) => {
     //Reset content and title values
     setNoteTitle([]);
     setNoteContent([]);
+  };
+
+  const handleNoteLockStatus = (id) => {
+    console.log(id);
   };
 
   return (
@@ -52,6 +58,9 @@ export const StateContext = ({ children }) => {
         setNoteTitle,
         noteContent,
         setNoteContent,
+        lockNote,
+        setLockNote,
+        handleNoteLockStatus,
       }}
     >
       {children}

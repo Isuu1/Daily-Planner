@@ -8,8 +8,11 @@ import { IoIosRemoveCircle } from "react-icons/io";
 //Context
 import { useStateContext } from "../../context/StateContext";
 
-const Note = ({ note }) => {
+const Note = ({ note, index }) => {
   console.log("Note", note);
+
+  const { lockNote, setLockNote, handleNoteLockStatus } =
+    useStateContext();
 
   return (
     <div
@@ -21,8 +24,12 @@ const Note = ({ note }) => {
       }}
     >
       <div className="note__buttons">
-        <button className="note__buttons__pin-button">
-          <FaUnlock />
+        <button
+          className="note__buttons__pin-button"
+          //handle note lock state
+          onClick={() => handleNoteLockStatus(note.id)}
+        >
+          {note.locked ? <FaLock /> : <FaUnlock />}
         </button>
         <button className="note__buttons__remove-button">
           <IoIosRemoveCircle />
