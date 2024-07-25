@@ -19,10 +19,12 @@ const Sidebar = () => {
           <IoHome />
           <p>Home</p>
         </li>
-        <li className="sidebar__menu__item">
-          <FaTasks />
-          Tasks
-        </li>
+        <Link to={"/tasks"}>
+          <li className="sidebar__menu__item">
+            <FaTasks />
+            Tasks
+          </li>
+        </Link>
         <li className="sidebar__menu__item">
           <FaDiagramProject />
           Projects
