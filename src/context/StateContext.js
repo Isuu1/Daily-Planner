@@ -40,6 +40,11 @@ export const StateContext = ({ children }) => {
     setNoteContent([]);
   };
 
+  const deleteNote = (id) => {
+    let newNotes = notes.filter((item) => item.id !== id);
+    setNotes(newNotes);
+  };
+
   // const handleNoteLockStatus = (id) => {
   //   console.log("Current note id: ", id);
   //   setLockNote(!lockNote);
@@ -66,6 +71,7 @@ export const StateContext = ({ children }) => {
         setNoteTitle,
         noteContent,
         setNoteContent,
+        deleteNote,
         lockNote,
         // setLockNote,
         // handleNoteLockStatus,

@@ -20,12 +20,15 @@ const Notes = () => {
   return (
     <>
       <div className="notes">
-        <button
-          className="notes__addnew-button"
-          onClick={() => setNewNoteModal(true)}
-        >
-          <IoIosAddCircle />
-        </button>
+        <div className="notes__sidebar">
+          <button
+            className="notes__sidebar__addnew-button"
+            onClick={() => setNewNoteModal(true)}
+          >
+            <IoIosAddCircle /> New
+          </button>
+        </div>
+
         {newNoteModal && <NewNote />}
         {newNoteModal && <div className="blur"></div>}
         {notes.map((note, index) => {

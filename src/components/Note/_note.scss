@@ -6,10 +6,10 @@
   max-height: 360px;
   padding: 0.7rem;
   // background: #f5f77e;
-
+  border-radius: 0.5rem;
   box-shadow: 6px 6px 10px -3px #d4d4d4;
   transition: all 0.2s;
-
+  align-self: flex-start;
   &__buttons {
     display: flex;
     justify-content: space-between;

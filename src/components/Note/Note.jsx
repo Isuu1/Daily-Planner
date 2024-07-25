@@ -11,7 +11,7 @@ import { useStateContext } from "../../context/StateContext";
 const Note = ({ note, index }) => {
   console.log("Note", note);
 
-  const { lockNote, setLockNote, handleNoteLockStatus } =
+  const { deleteNote, lockNote, setLockNote, handleNoteLockStatus } =
     useStateContext();
 
   return (
@@ -31,7 +31,10 @@ const Note = ({ note, index }) => {
         >
           {/* {note.locked ? <FaLock /> : <FaUnlock />} */}
         </button>
-        <button className="note__buttons__remove-button">
+        <button
+          className="note__buttons__remove-button"
+          onClick={() => deleteNote(note.id)}
+        >
           <IoIosRemoveCircle />
         </button>
       </div>

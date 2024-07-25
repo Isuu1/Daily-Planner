@@ -47,8 +47,10 @@
   min-height: 100px;
   max-height: 360px;
   padding: 0.7rem;
+  border-radius: 0.5rem;
   box-shadow: 6px 6px 10px -3px #d4d4d4;
   transition: all 0.2s;
+  align-self: flex-start;
 }
 .note__buttons {
   display: flex;
@@ -70,7 +72,7 @@
 
 .notes {
   position: relative;
-  padding: 3rem;
+  padding: 1.4rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -78,18 +80,22 @@
   overflow: auto;
   align-content: flex-start;
 }
-.notes__addnew-button {
+.notes__sidebar {
+  width: 100%;
+}
+.notes__sidebar__addnew-button {
   display: flex;
-  padding: 0;
+  gap: 0.2rem;
+  padding: 0.3rem;
   align-items: center;
   background: #000000;
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.4rem;
   align-self: flex-start;
-  border-radius: 50%;
+  border-radius: 0.5rem;
   transition: all 0.2s;
 }
-.notes__addnew-button:hover {
+.notes__sidebar__addnew-button:hover {
   background: #fff;
   color: #000000;
 }
@@ -99,13 +105,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 20%;
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-items: center;
   padding: 0.7rem;
   background: #f5f77e;
   box-shadow: 9px 12px 10px -3px #d4d4d4;
-  margin-top: 20%;
   min-height: 300px;
   max-width: 300px;
   transition: all 0.2s;
@@ -220,6 +226,7 @@ p {
   width: 100%;
   height: 100%;
   position: absolute;
+  margin: 0;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.337254902);
