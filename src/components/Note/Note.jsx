@@ -27,9 +27,9 @@ const Note = ({ note, index }) => {
         <button
           className="note__buttons__pin-button"
           //handle note lock state
-          onClick={() => handleNoteLockStatus(note.id)}
+          // onClick={() => handleNoteLockStatus(note.id)}
         >
-          {note.locked ? <FaLock /> : <FaUnlock />}
+          {/* {note.locked ? <FaLock /> : <FaUnlock />} */}
         </button>
         <button className="note__buttons__remove-button">
           <IoIosRemoveCircle />

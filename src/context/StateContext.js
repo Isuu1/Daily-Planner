@@ -40,9 +40,17 @@ export const StateContext = ({ children }) => {
     setNoteContent([]);
   };
 
-  const handleNoteLockStatus = (id) => {
-    console.log(id);
-  };
+  // const handleNoteLockStatus = (id) => {
+  //   console.log("Current note id: ", id);
+  //   setLockNote(!lockNote);
+  //   let currentNoteIndex = notes.findIndex((note) => note.id === id);
+  //   const newNote = { ...notes[currentNoteIndex], locked: lockNote };
+  //   const updatedNotes = [...notes];
+  //   updatedNotes.splice(currentNoteIndex, 1); // Remove the note from its current position
+  //   updatedNotes.unshift(newNote); // Add the updated note to the front
+  //   setNotes(updatedNotes);
+  //   console.log("New ntoe: ", newNote);
+  // };
 
   return (
     <Context.Provider
@@ -59,8 +67,8 @@ export const StateContext = ({ children }) => {
         noteContent,
         setNoteContent,
         lockNote,
-        setLockNote,
-        handleNoteLockStatus,
+        // setLockNote,
+        // handleNoteLockStatus,
       }}
     >
       {children}
