@@ -21,11 +21,15 @@ const Tasks = () => {
         <ul className="tasks__nav-bar__menu">
           <li
             className={`tasks__nav-bar__menu__item ${
+              //change styling for current tab
               taskCategory === "ongoing" ? "task-nav-active" : ""
             }`}
             onClick={() => setTaskCategory("ongoing")}
           >
-            Ongoing
+            Ongoing{" "}
+            <p className="tasks__nav-bar__menu__item__counter">
+              {tasks.length}
+            </p>
           </li>
           <li
             className={`tasks__nav-bar__menu__item ${
