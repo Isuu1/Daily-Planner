@@ -211,6 +211,127 @@
   border: 1px solid #ffffff;
 }
 
+.task-nav-active {
+  background: #48e033 !important;
+  color: #fff !important;
+}
+
+.tasks {
+  padding: 1.4rem;
+  background: #f9f9f9;
+}
+.tasks__nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.tasks__nav-bar__menu {
+  display: flex;
+  gap: 0.3rem;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.tasks__nav-bar__menu__item {
+  padding: 0.3rem;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0.3rem;
+}
+.tasks__all {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  max-width: 50%;
+}
+.tasks__all__headline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.tasks__all__headline__add-button {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.3rem;
+  align-items: center;
+  background: #48e033;
+  color: #ffffff;
+  font-size: 1.4rem;
+  align-self: flex-start;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  margin-left: auto;
+}
+.tasks__all__headline__add-button:hover {
+  background: #fff;
+  color: #48e033;
+}
+
+.new-checkbox {
+  width: 25px;
+  height: 25px;
+  background: #f9f9f9;
+  border-radius: 0.5rem;
+  margin-right: 0.3rem;
+  transition: all 0.2s;
+}
+
+.task-urgent {
+  background: rgba(255, 0, 0, 0.2196078431);
+  color: #ff0000;
+}
+
+.task-noturgent {
+  background: rgba(255, 196, 0, 0.2196078431);
+  color: #ffc400;
+}
+
+.checkbox-completed {
+  background: #48e033;
+}
+
+.task-completed {
+  background: #48e033;
+  color: #fff;
+}
+
+.task {
+  padding: 0.3rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px -10px rgba(61, 61, 61, 0.2941176471);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.task__priority {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.task__priority__label {
+  padding: 0.2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+.task__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.task__inputs__checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.task__inputs__title {
+  border: 0;
+  outline: #f9f9f9;
+}
+
 button {
   background: none;
   border: 0;

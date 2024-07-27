@@ -10,13 +10,34 @@ export const StateContext = ({ children }) => {
   const [noteTitle, setNoteTitle] = useState();
   const [noteContent, setNoteContent] = useState();
   const [lockNote, setLockNote] = useState(false);
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      title: "Jestem gejem na przyklad",
+      state: "ongoing",
+      urgent: false,
+    },
+    {
+      id: 2,
+      title: "Drugie testowe cos tam csot tam",
+      state: "completed",
+      urgent: true,
+    },
+    {
+      id: 3,
+      title: "Trzecie testowe cos tam csot tam",
+      state: "completed",
+      urgent: true,
+    },
+    {
+      id: 3,
+      title: "Trzecie testowe cos tam csot tam",
+      state: "ongoing",
+      urgent: true,
+    },
+  ]);
 
   const addNewNote = () => {
-    console.log(
-      "Note background in add new note function: ",
-      noteBackground
-    );
-
     if (!noteTitle || !noteContent) {
       alert("Please provide title and content");
       return;
@@ -45,6 +66,16 @@ export const StateContext = ({ children }) => {
     setNotes(newNotes);
   };
 
+  const handleTaskState = (id) => {
+    setTasks((prevTasks) => {
+      const newTasks = prevTasks.map((task) =>
+        task.id === id ? { ...task, state: "completed" } : task
+      );
+      return newTasks;
+    });
+  };
+  console.log(tasks);
+
   // const handleNoteLockStatus = (id) => {
   //   console.log("Current note id: ", id);
   //   setLockNote(!lockNote);
@@ -72,7 +103,10 @@ export const StateContext = ({ children }) => {
         noteContent,
         setNoteContent,
         deleteNote,
+        tasks,
+        setTasks,
         lockNote,
+        handleTaskState,
         // setLockNote,
         // handleNoteLockStatus,
       }}
